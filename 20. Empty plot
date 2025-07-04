@@ -1,0 +1,7 @@
+plot.new()
+plot(1, type="n", xlim=c(0,5), ylim=c(0,5))
+
+Output:
+First: blank window.
+Second: empty graph with axes from 0 to 5.
+
