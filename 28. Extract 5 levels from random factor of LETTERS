@@ -1,0 +1,10 @@
+set.seed(123)
+sample_letters <- sample(LETTERS, 10, replace=TRUE)
+factor_letters <- factor(sample_letters)
+print(factor_letters)
+print(levels(factor_letters)[1:5])
+
+#output
+ [1] I G D J J E J E G J
+Levels: D E G I J
+[1] "D" "E" "G" "I" "J"
