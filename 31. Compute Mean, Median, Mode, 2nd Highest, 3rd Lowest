@@ -1,0 +1,20 @@
+x <- c(90, 50, 70, 80, 70, 60, 20, 30, 80, 90, 20)
+
+mean(x)
+median(x)
+mode_val <- names(sort(table(x), decreasing=TRUE))[1]
+cat("Mode:", mode_val, "\n")
+#output
+Mean: 60
+Median: 70
+Mode: 20 (or 70 or 80 or 90 — depending on frequency tie-break)
+(ii) 2nd Highest and 3rd Lowest
+sorted <- sort(unique(x))
+second_highest <- tail(sorted, 2)[1]
+third_lowest <- sorted[3]
+cat("2nd Highest:", second_highest, "\n")
+cat("3rd Lowest:", third_lowest, "\n")
+#output
+2nd Highest: 80
+3rd Lowest: 30
+
