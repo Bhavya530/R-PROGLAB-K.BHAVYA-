@@ -1,0 +1,14 @@
+set.seed(123)
+idx <- sample(1:nrow(iris), 0.8 * nrow(iris))
+train <- iris[idx, ]
+test <- iris[-idx, ]
+
+model <- multinom(Species ~ Petal.Length + Petal.Width, data = train)
+
+# Predict
+pred <- predict(model, newdata = test, type = "class")
+prob <- predict(model, newdata = test, type = "prob")
+print(head(prob))
+
+# Confusion matrix
+table(Predicted = pred, Actual = test$Species)
