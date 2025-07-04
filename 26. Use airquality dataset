@@ -1,0 +1,19 @@
+data("airquality")
+
+# Check if data frame
+is_df <- is.data.frame(airquality)
+cat("Is data frame? ", is_df, "\n")
+
+# Order by 1st (Ozone) and 2nd (Solar.R) column
+ordered <- airquality[order(airquality$Ozone, airquality$Solar.R), ]
+# Remove 'Solar.R' and 'Wind'
+cleaned <- subset(ordered, select = -c(Solar.R, Wind))
+print(head(cleaned, 5))  # Display first 5 rows
+#output
+Is data frame?  TRUE
+  Ozone Temp Month Day
+1     1   59     5   1
+2     4   61     5   2
+3     6   58     5   3
+4     7   63     5   4
+5     8   61     5   5
