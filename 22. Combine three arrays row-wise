@@ -1,0 +1,12 @@
+a1 <- matrix(1:9, 3, 3, byrow=TRUE)
+a2 <- matrix(10:18, 3, 3, byrow=TRUE)
+a3 <- matrix(19:27, 3, 3, byrow=TRUE)
+
+result <- rbind(a1[1,], a2[1,], a3[1,])
+print(result)
+
+#output
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]   10   11   12
+[3,]   19   20   21
